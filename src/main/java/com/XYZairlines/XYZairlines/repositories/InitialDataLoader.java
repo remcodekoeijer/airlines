@@ -26,10 +26,14 @@ public class InitialDataLoader {
         for(int i = 0; i < 5; i++){
             Airplane airplane = new Airplane();
             airplane.setCurrentFuel(i*1000);
-            if(i%2 == 0)
+            if(i%2 == 0) {
+                airplane.setCurrentLocation(Location.AMSTERDAM);
                 airplanes1.add(airplane);
-            else
+            }
+            else {
+                airplane.setCurrentLocation(Location.LONDON);
                 airplanes2.add(airplane);
+            }
             airplaneRepository.save(airplane);
         }
 

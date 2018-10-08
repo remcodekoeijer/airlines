@@ -13,6 +13,9 @@ public class Airplane {
     private long id;
     private static final int maxFuel = 5000;
     private int currentFuel;
+    private Location currentLocation;
+
+
 
     public Airplane(){}
 
@@ -40,5 +43,12 @@ public class Airplane {
     }
     public void setToMaxFuel(){
         currentFuel = maxFuel;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
     }
 }

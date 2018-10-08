@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
     <title>Ik ben een vliegveld</title>
 </head>
 <body>
 <h1>Airports here</h1>
 
+<table id="airportTable">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Location</th>
+        <th>Number of planes here</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="scripts/CRUDairport.js"></script>
 </body>
 </html>

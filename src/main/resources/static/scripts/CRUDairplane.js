@@ -82,6 +82,7 @@ $(document).ready(function () {
         columns: [
             { "data": "id" },
             { "data": "currentFuel" },
+            { "data": "currentLocation" },
             { "data": function() {
                        return '<button onclick="addFuel(this.parentElement.parentElement.children[0].innerText)" type="button" class="btn btn-danger">Add fuel</button>' }}
         ]
