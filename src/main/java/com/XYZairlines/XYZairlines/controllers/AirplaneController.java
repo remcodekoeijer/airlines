@@ -34,4 +34,14 @@ public class AirplaneController {
     public Airplane createOnePlane(@RequestBody Airplane airplane){
         return airplaneRepository.save(airplane);
     }
+
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Airplane addFuel(@PathVariable long id){
+        Optional <Airplane> findAirplane = airplaneRepository.findById(id);
+        if(!findAirplane.isPresent()){
+            throw new NotFoundException("Plane with id is not found.");
+        }
+        findAirplane.get().setToMaxFuel();
+        return airplaneRepository.save(findAirplane.get());
+    }
 }

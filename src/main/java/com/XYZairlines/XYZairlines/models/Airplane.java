@@ -11,7 +11,7 @@ public class Airplane {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    //private int maxFuel = 5000;
+    private static final int maxFuel = 5000;
     private int currentFuel;
 
     public Airplane(){}
@@ -35,7 +35,10 @@ public class Airplane {
     }
     public void setCurrentFuel(int currentFuel) {
         this.currentFuel = currentFuel;
-        if(currentFuel > 5000)
-            this.currentFuel = 5000;
+        if(currentFuel > maxFuel)
+            this.currentFuel = maxFuel;
+    }
+    public void setToMaxFuel(){
+        currentFuel = maxFuel;
     }
 }
