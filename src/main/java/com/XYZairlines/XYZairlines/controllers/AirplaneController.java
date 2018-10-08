@@ -25,8 +25,6 @@ public class AirplaneController {
     public Airplane getOnePlane(@PathVariable long id){
         Optional <Airplane> findAirplane = airplaneRepository.findById(id);
         if(!findAirplane.isPresent()){
-            //todo;
-            //Make a 404 plane not found exception
             throw new NotFoundException("Plane with id is not found.");
         }
         return findAirplane.get();
